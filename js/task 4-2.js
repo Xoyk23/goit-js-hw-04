@@ -25,8 +25,8 @@ function filterArray(array, cb) {
   for(let i = 0; i < array.length; i += 1) {
     const element = array[i];
     const index = i;
-    // Write code under this line
-    if(cb(element, index, arr) === true) {
+  
+    if(cb(element, index, array)) {
       numbers.push(element);
     }
   }
@@ -42,7 +42,7 @@ console.log(filterArray(arr, isEven));
 // [2, 4, 2]
 
 
-const test = [25,1, 3, 4, 8, 15, 16]
+// const test = [25,1, 3, 4, 8, 15, 16, 52, 23]
 
-console.log(filterArray(test, isEven));
-console.log(filterArray(test, isUniq));
+// console.log(filterArray(test, isEven));
+// console.log(filterArray(test, isUniq));
