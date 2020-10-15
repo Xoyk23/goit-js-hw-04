@@ -26,7 +26,7 @@ const invokeInventoryAction = function (itemName, action) {
 
 const invokeAdd = invokeInventoryAction(
   'Medkit',
-  inventory.add, // Write code in this line
+  inventory.add.bind(inventory),
 );
 const arrayAdd = [...inventory.items];
 /* 
@@ -39,7 +39,7 @@ const arrayAdd = [...inventory.items];
 
 const invokeRemove = invokeInventoryAction(
   'Gas mask',
-  inventory.remove, // Write code in this line
+  inventory.remove.bind(inventory),
 );
 
 const arrayRemove = [...inventory.items];
